@@ -1,11 +1,10 @@
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./styles/index.css"/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/index.css"/> <!-- Link my stylesheet to my page -->
+    <meta charset="UTF-8"> <!-- set the charset to avoid special char bugs -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Dashboard</title>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!-- Link my script.js to my page -->
 </head>
 <body>
 
@@ -17,12 +16,12 @@
     <div id="popup" class="popup">
         <div class="input-container">
             <div class="input">
-                <label>Fuel level</label>
-                <input type="number" id="input-fuel" value="">
+                <label>Fuel level</label> <!-- labels are like titles for inputs -->
+                <input type="number" id="input-fuel" value=""> <!-- here dont forget to put the exact same ID that you used in your data array (! it s case sensitive remember !) -->
             </div>
             <div class="input">
                 <label>Speed</label>
-                <input type="number" id="input-speed" value="">
+                <input type="number" id="input-speed" value=""> <!-- the type="number" props allows you to change the behavior of the input based on what you wanna get, ex: number, email, text, password -->
             </div>
             <div class="input">
                 <label>Gravity</label>
@@ -37,32 +36,38 @@
                 <input type="number" id="input-food" value="">
             </div>
         </div>
-        <button onclick="saveValues()">Save data</button>
+        <button onclick="saveValues()">Save data</button> <!-- onClick is gonna trigger the saveValues() function into your script.js file -->
     </div>
 
 
 
-    <ul>
+    <ul> <!-- ul means it s an unordered list (doesn't really matter it can be a div) -->
+
         <div class="card">
-            <h1 id="display-fuel">00</h1>
+            <h1 id="display-fuel">00</h1> <!-- here you can see that this element got the id "display-fuel" which means that when we call saveValues the 00 here is gonna get overrided by the new value of the coresponding input -->
             <p>Left miles with your quantity of fuel.</p>
         </div>
+
         <div class="card">
             <h1 id="display-speed">00</h1>
             <p>Current speed.</p>
         </div>
+
         <div class="card">
             <h1 id="display-gravity">00</h1>
             <p>Gravity force.</p>
         </div>
+
         <div class="card">
             <h1 id="display-water">00</h1>
             <p>Days left with your quantity of water.</p>
         </div>
+
         <div class="card">
             <h1 id="display-food">00</h1>
             <p>Days left with your quantity of food.</p>
         </div>
+
     </ul>
 </body>
 </html>
